@@ -1,5 +1,7 @@
 import React from "react";
 import "./Notifications.css";
+import closeIcon from "./close-icon.png";
+import { getLatestNotification } from "./utils";
 
 function Notifications() {
   return (
@@ -16,7 +18,7 @@ function Notifications() {
         <li data="default">New course available</li>
         <li data="urgent">New resume available</li>
         <li data="urgent" dangerouslySetInnerHTML={{ __html: getLatestNotification() }}></li>
-      </ul>  
+      </ul>
     </div>
   );
 }
